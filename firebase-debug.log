@@ -1,0 +1,113 @@
+[debug] [2025-12-05T15:37:22.613Z] ----------------------------------------------------------------------
+[debug] [2025-12-05T15:37:22.615Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-12-05T15:37:22.615Z] CLI Version:   14.27.0
+[debug] [2025-12-05T15:37:22.615Z] Platform:      win32
+[debug] [2025-12-05T15:37:22.615Z] Node Version:  v25.1.0
+[debug] [2025-12-05T15:37:22.615Z] Time:          Fri Dec 05 2025 22:37:22 GMT+0700 (Indochina Time)
+[debug] [2025-12-05T15:37:22.615Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Lenovo\OneDrive\Desktop\my fineshyt
+
+[debug] [2025-12-05T17:13:32.764Z] ----------------------------------------------------------------------
+[debug] [2025-12-05T17:13:32.765Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-12-05T17:13:32.766Z] CLI Version:   14.27.0
+[debug] [2025-12-05T17:13:32.766Z] Platform:      win32
+[debug] [2025-12-05T17:13:32.766Z] Node Version:  v25.1.0
+[debug] [2025-12-05T17:13:32.766Z] Time:          Sat Dec 06 2025 00:13:32 GMT+0700 (Indochina Time)
+[debug] [2025-12-05T17:13:32.766Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Lenovo\OneDrive\Desktop\my fineshyt
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-12-05T17:18:06.901Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-05T17:18:06.901Z] > authorizing via signed-in user (rahmatrizal411@gmail.com)
+[debug] [2025-12-05T17:19:25.604Z] Checked if tokens are valid: false, expires at: 1764952620753
+[debug] [2025-12-05T17:19:25.605Z] Checked if tokens are valid: false, expires at: 1764952620753
+[debug] [2025-12-05T17:19:25.605Z] > refreshing access token with scopes: []
+[debug] [2025-12-05T17:19:25.608Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-05T17:19:25.608Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-05T17:19:25.917Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-05T17:19:25.918Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-05T17:19:25.927Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-05T17:19:25.927Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"for my fineshyt"}
+[debug] [2025-12-05T17:19:26.547Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-12-05T17:19:26.547Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"for-my-fineshyt"}
+[debug] [2025-12-05T17:19:44.632Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:19:44.632Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:19:44.634Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-05T17:19:44.634Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"My fineshyt"}
+[debug] [2025-12-05T17:19:45.376Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-12-05T17:19:45.377Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"my-fineshyt"}
+[debug] [2025-12-05T17:19:55.783Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:19:55.783Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:19:55.784Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-05T17:19:55.784Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"My-fineshyt"}
+[debug] [2025-12-05T17:19:56.540Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-12-05T17:19:56.540Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"my-fineshyt"}
+[debug] [2025-12-05T17:20:19.124Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:20:19.124Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:20:19.125Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-05T17:20:19.125Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"My fineshyt vibes"}
+[debug] [2025-12-05T17:20:19.778Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-12-05T17:20:19.778Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"my-fineshyt-vibes"}
+[debug] [2025-12-05T17:20:36.916Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:20:36.916Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:20:36.917Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-05T17:20:36.917Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"dari jalil buat fineshyt"}
+[debug] [2025-12-05T17:20:37.710Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-12-05T17:20:37.710Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"dari-jalil-buat-fineshyt"}
+[debug] [2025-12-05T17:20:51.638Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:20:51.638Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:20:51.639Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-05T17:20:51.639Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"ijalil"}
+[debug] [2025-12-05T17:20:52.656Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-12-05T17:20:52.656Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_UNAVAILABLE","suggestedProjectId":"ijalil-4f9ec"}
+[debug] [2025-12-05T17:21:04.763Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:21:04.763Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:21:04.765Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-05T17:21:04.765Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"ijal jalaludin"}
+[debug] [2025-12-05T17:21:05.555Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-12-05T17:21:05.556Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"ijal-jalaludin"}
+[debug] [2025-12-05T17:22:06.815Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:22:06.816Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:22:06.817Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-05T17:22:06.817Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"My fineshyt.web"}
+[debug] [2025-12-05T17:22:07.077Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 400
+[debug] [2025-12-05T17:22:07.078Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT"}}
+[debug] [2025-12-05T17:22:07.079Z] Couldn't check if project ID My fineshyt.web is available. Original error: FirebaseError: Failed to check if project ID is available. See firebase-debug.log for more info.
+[debug] [2025-12-05T17:22:08.650Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:22:08.650Z] Checked if tokens are valid: true, expires at: 1764958764918
+[debug] [2025-12-05T17:22:08.650Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-12-05T17:22:08.650Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"My fineshyt.web","name":"My fineshyt.web"}
+[debug] [2025-12-05T17:22:10.170Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2025-12-05T17:22:10.170Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"},{"field":"display_name","description":"project display name contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2025-12-05T17:22:10.348Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
