@@ -11,26 +11,26 @@ document.addEventListener("keydown", function (e) {
 const messages = [
   "Tap dimana aja bebas asal jangan ditampol ( ͒•·̫|",
   "(づ ◕‿◕ )づ Hai bubub",
-  "kemarin kamu ngalamin hari yang buruk ya",
-  "gapapa tetap semangat ya",
-  "jangan sedih sedih lagi",
-  "jangan nangis eh boleh deng gapapa hahaha",
-  "aku bangga deh sama kamu",
-  "karena kamu udah ngelewatin ini sendirian,\n udah bertahan sejauh ini",
-  "jadi... makasih yaa kamu udah berusaha sebaik mungkin dan selalu ngelakuin yang terbaik",
-  "i wish kamu selalu berada di tempat yang membuat kamu nyaman,\ndan dikelilingi sama orang orang yang ngerecharge energi kamu",
-  "kalo gada tempat\nkamu masih punya satu space yang luas",
-  "ada aku yang selalu terbuka buat kamu berteduh, buat kamu pulang",
-  "aku hanya ingin kamu tidak selalu merasa sendiri,\n di saat kamu lelah ragu kamu butuh sesuatu cari aja aku",
-  "i hope something so beautiful happens to u\n,that u will forget evrything that has ever hurt u",
-  "aku cuma mau bilang",
-  "tetap semangat ya cantik nya aku sayang nya aku",
+  "(っ◞‸◟c) kemarin kamu ngalamin hari yang buruk ya",
+  "（＾ω＾）gapapa tetap semangat ya",
+  "（＾ω＾）jangan sedih sedih lagi",
+  "（＾ω＾）jangan nangis eh boleh deng gapapa hahaha",
+  "（＾ω＾）aku bangga deh sama kamu",
+  "(；⌣̀_⌣́) karena kamu udah ngelewatin ini sendirian, udah bertahan sejauh ini",
+  "(；⌣̀_⌣́) jadi... makasih yaa kamu udah berusaha sebaik mungkin dan selalu ngelakuin yang terbaik",
+  "ｄ(*￣o￣) i wish kamu selalu berada di tempat yang membuat kamu nyaman, dan dikelilingi sama orang orang yang ngerecharge energi kamu",
+  "ｄ(*￣o￣) kalo gada tempat, kamu masih punya satu space yang luas",
+  "(* ≧∀≦ *) ada aku yang selalu terbuka buat kamu berteduh, buat kamu pulang",
+  "ｄ(*￣o￣) aku hanya ingin kamu tidak selalu merasa sendiri, di saat kamu lelah ragu kamu butuh sesuatu cari aja aku",
+  "ｄ(*￣o￣) i hope something so beautiful happens to u,that u will forget evrything that has ever hurt u",
+  "ｄ(*￣o￣) aku cuma mau bilang",
+  "(* ≧∀≦ *) tetap semangat ya cantik nya aku sayang nya aku",
   "(づ ￣ ³￣)づ yeah ur my fineshyt ❤️",
-  "tetap semangat jangan berhenti di tengah jalan",
-  "tidak ada kehidupan tanpa masalah, dan tidak ada perjuangan tanpa rasa lelah",
-  "be pround pf urself because god is pround of u",
-  "mwahhh",
-  "coba pencet tombol dibawah ini ",
+  "(* ≧∀≦ *) tetap semangat jangan berhenti di tengah jalan",
+  "ｄ(*￣o￣) tidak ada kehidupan tanpa masalah, dan tidak ada perjuangan tanpa rasa lelah",
+  "( ´˘ᴗ˘)♡ be pround of urself because god is pround of u",
+  "(ɔˆ ³(ˆ⌣ˆc) mwahhh",
+  "coba pencet tombol dibawah ini ( ͒•·̫| ",
 ];
 
 let currentPage = 0;
@@ -42,22 +42,27 @@ function showMessage() {
   // ===================================
   // KODE BARU UNTUK TOMBOL LANJUT
   // ===================================
+  // GANTI SELURUH FUNGSI INI DI DALAM showMessage()
+
   $(".next-button").on("click", function () {
-    // 1. NON-AKTIFKAN ANIMASI JANTUNG (opsional, agar halaman bersih)
-    clearInterval(love);
+    // Cek apakah halaman final sudah ada di DOM
+    if ($(".final-page").length === 0) {
+      // 1. NON-AKTIFKAN ANIMASI JANTUNG
+      clearInterval(love);
 
-    // 2. SEMBUNYIKAN SEMUA ELEMEN LAMA
-    $(".bg_heart").hide();
+      // 2. SEMBUNYIKAN SEMUA ELEMEN LAMA
+      $(".bg_heart").hide();
 
-    // 3. TAMPILKAN KONTEN HALAMAN BARU
-
-    // CONTOH: Tampilkan pesan khusus di layar
-    $("body").append(
-      '<div class="final-page" style="text-align: center; color: white; padding-top: 100px;"><h1>SELAMAT! ❤️</h1><p style="font-size: 1.5em;">Terima kasih sudah membaca semua pesanku. Ini adalah halaman final!</p></div>'
-    );
-
-    // CONTOH LAIN: Ganti lokasi halaman (Jika Anda punya halaman lain)
-    // window.location.href = "halaman-final.html";
+      // 3. TAMPILKAN KONTEN HALAMAN BARU (Hanya jika belum ada)
+      // Ganti seluruh blok .append dengan kode di bawah:
+      $("body").append(
+        '<div class="final-page" style="text-align: center; background-color: white; padding-top: 100px; height: 100vh; width: 100%;">' +
+          '<h1 style="color: black;">SEMANGAT BUAT HARI INI! ✨</h1>' + // DI SINI: color: black
+          '<p style="font-size: 1.8em; color: black; margin-top: 30px;">Jangan lupa berbahagialah</p>' + // DI SINI: color: black
+          '<p style="font-size: 1em; color: #555;">from me make u happy (>‿♥)</p>' +
+          "</div>"
+      );
+    }
   });
 
   isLastPage = currentPage === messages.length - 1;
