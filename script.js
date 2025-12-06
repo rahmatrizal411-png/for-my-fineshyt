@@ -37,28 +37,20 @@ let currentPage = 0;
 let isLastPage = false;
 
 function showMessage() {
-  $(".message").text(messages[currentPage]);
-
-  // ===================================
-  // KODE BARU UNTUK TOMBOL LANJUT
-  // ===================================
-  // GANTI SELURUH FUNGSI INI DI DALAM showMessage()
+  $(".message").text(messages[currentPage]); // =================================== // KODE BARU UNTUK TOMBOL LANJUT // ===================================
 
   $(".next-button").on("click", function () {
     // Cek apakah halaman final sudah ada di DOM
     if ($(".final-page").length === 0) {
       // 1. NON-AKTIFKAN ANIMASI JANTUNG
-      clearInterval(love);
+      clearInterval(love); // 2. SEMBUNYIKAN SEMUA ELEMEN LAMA
 
-      // 2. SEMBUNYIKAN SEMUA ELEMEN LAMA
-      $(".bg_heart").hide();
+      $(".bg_heart").hide(); // 3. TAMPILKAN KONTEN HALAMAN BARU (FULL LAYAR & TEKS KUSTOM)
 
-      // 3. TAMPILKAN KONTEN HALAMAN BARU (Hanya jika belum ada)
-      // Ganti seluruh blok .append dengan kode di bawah:
       $("body").append(
-        '<div class="final-page" style="text-align: center; background-color: white; padding-top: 100px; height: 100vh; width: 100%;">' +
-          '<h1 style="color: black;">SEMANGAT BUAT HARI INI! ✨</h1>' + // DI SINI: color: black
-          '<p style="font-size: 1.8em; color: black; margin-top: 30px;">Jangan lupa berbahagialah</p>' + // DI SINI: color: black
+        '<div class="final-page" style="text-align: center; background-color: white; padding-top: 0; height: 100vh; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: fixed; top: 0; left: 0;">' +
+          '<h1 style="color: black;">SEMANGAT BUAT HARI INI! ✨</h1>' +
+          '<p style="font-size: 1.8em; color: black; margin-top: 30px;">Jangan lupa berbahagialah</p>' +
           '<p style="font-size: 1em; color: #555;">from me make u happy (>‿♥)</p>' +
           "</div>"
       );
@@ -142,8 +134,14 @@ window.onload = function () {
   clearMusicState();
 };
 
+// ===================================
+// FUNGSI MUSIK DENGAN LOOP 0 DETIK HINGGA 60 DETIK
+// ===================================
 function setupMusic() {
-  const music = document.getElementById("backgroundMusic");
+  const music = document.getElementById("backgroundMusic"); // Batas waktu loop (0 detik sampai 60 detik)
+
+  const LOOP_START_TIME = 0;
+  const LOOP_END_TIME = 60;
 
   if (!localStorage.getItem("initialLoad")) {
     clearMusicState();
@@ -165,13 +163,18 @@ function setupMusic() {
 
   music.addEventListener("pause", () => {
     localStorage.setItem("musicPlaying", "false");
-  });
+  }); // Logika untuk mencek waktu dan melompat kembali
 
   setInterval(() => {
-    localStorage.setItem("musicCurrentTime", music.currentTime);
+    localStorage.setItem("musicCurrentTime", music.currentTime); // Jika waktu saat ini melebihi 60 detik, kembalikan ke 0 detik
+    if (music.currentTime >= LOOP_END_TIME) {
+      music.currentTime = LOOP_START_TIME;
+    }
   }, 1000);
 
   document.addEventListener("click", function startMusic() {
+    // Saat klik pertama, pastikan musik dimulai dari awal (detik ke-0)
+    music.currentTime = LOOP_START_TIME;
     music.play().catch((error) => {
       console.log("Autoplay prevented", error);
     });
