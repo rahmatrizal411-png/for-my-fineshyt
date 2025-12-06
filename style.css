@@ -1,81 +1,128 @@
-/* 1. Pengaturan Dasar (Menengahkan Konten) */
-body,
-html {
+html,
+body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center; /* Menengahkan horizontal */
-  align-items: center; /* Menengahkan vertikal */
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff; /* Latar belakang hitam */
-  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .bg_heart {
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: relative;
-  user-select: none;
+  overflow: hidden;
   cursor: pointer;
 }
 
-/* 2. Styling Pesan */
-.message {
-  z-index: 20;
-  position: relative;
-  font-size: 2.5em;
-  color: #000000;
-  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
-}
-
-/* 3. Styling Jantung (KODE KRITIS UNTUK MEMBENTUK HATI) */
-/* Bagian ini yang membuat DIV menjadi bentuk hati, bukan kubus */
 .heart {
   position: absolute;
-  bottom: 100px;
+  top: -50%;
   transform: rotate(-45deg);
-  z-index: 50;
 }
 
 .heart:before,
 .heart:after {
-  content: "";
   position: absolute;
+  display: block;
+  content: "";
   width: 100%;
   height: 100%;
   background: inherit;
-  border-radius: 50%; /* PENTING: Untuk pembulatan */
+  border-radius: 100%;
 }
 
 .heart:before {
   top: -50%;
-}
-.heart:after {
-  left: 50%;
+  left: 0;
 }
 
-/* 4. Animasi: Jantung Mengambang dan Berterbangan */
+.heart:after {
+  top: 0;
+  right: -50%;
+}
+
 @keyframes love {
   0% {
-    bottom: 0%;
-    opacity: 0.7;
-    transform: rotate(-45deg) scale(0.6);
+    top: 110%;
   }
-  25% {
-    transform: rotate(-55deg) scale(0.7) translateX(20px);
+}
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 80%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.next-button {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.next-button:hover {
+  background-color: #ff3357;
+  transform: translateX(-50%) scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .message {
+    font-size: 1.5em;
+    padding: 10px;
   }
-  50% {
-    transform: rotate(-35deg) scale(0.8) translateX(-20px);
-    opacity: 0.9;
+
+  .next-button {
+    padding: 10px 20px;
+    font-size: 1em;
   }
-  75% {
-    transform: rotate(-50deg) scale(0.9) translateX(10px);
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .message {
+    font-size: 2em;
+    padding: 15px;
   }
-  100% {
-    bottom: 100%;
-    opacity: 0;
-    transform: rotate(-40deg) scale(1);
+
+  .next-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1025px) {
+  .message {
+    font-size: 3em;
+    padding: 20px;
+  }
+
+  .next-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
   }
 }
